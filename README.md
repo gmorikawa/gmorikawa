@@ -36,15 +36,3 @@ Here are some ideas to get you started:
 
 #### Operational Systems
 ![OS](https://skillicons.dev/icons?i=debian,ubuntu,windows,apple)
-
-## Personal Projects
-
-### Toshokan
-
-Application to manage documents like books, whitepapers and research-papers.
-
-#### Repositories
-
-* [toshokan](https://github.com/gmorikawa/toshokan);
-* [toshokan-web](https://github.com/gmorikawa/toshokan-web);
-* [toshokan-ops](https://github.com/gmorikawa/toshokan-ops);
