@@ -1,0 +1,31 @@
+= Deploy
+
+== Github Pages
+
+=== Deploy with custom domain
+
+To deploy this project to Github Pages, first I configured the DNS Records for the domain to point to Github Pages.  
+On _Cloudflare_ I added four _A_ records for the domain pointing to the following IP addresses:
+
+```
+gmorikawa.dev A 185.199.108.153
+gmorikawa.dev A 185.199.109.153
+gmorikawa.dev A 185.199.110.153
+gmorikawa.dev A 185.199.111.153
+```
+
+Then I added a _CNAME_ record for the subdomain `www` pointing to the domain name.
+
+```
+www.gmorikawa.dev CNAME gmorikawa.dev
+```
+
+[NOTE]
+====
+In order to be correctly deployed and available with SSL, I had to temporarily disable the _Cloudflare_ proxy for the domain and subdomain. Otherwise, the SSL certificate would not be generated and the site would not be available via HTTPS. After the deployment was completed, I re-enabled the _Cloudflare_ proxy for both the domain and subdomain.
+====
+
+In Github, I created a separated branch `main` just for deployment and created a Github Action workflow to automatically deploy the project to Github Pages whenever a new commit is pushed to the `main` branch.
+
+At last, I configured the Github Pages to be deployed from Github Actions (set _Source_ to _GitHub Actions_) and set the custom domain to `gmorikawa.dev`. After that, the site was successfully deployed and available at the domain.
+It takes a few minutes for the DNS records to propagate and for the SSL certificate to be generated, so the site may not be immediately available after deployment.
