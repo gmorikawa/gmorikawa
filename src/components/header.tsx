@@ -1,4 +1,4 @@
-import personal from "@portfolio/data/personal-information.json";
+import personal from "@portfolio/data/base.json";
 
 export type PortifolioHeaderProps = React.ComponentProps<"header">;
 
@@ -7,15 +7,15 @@ export function PortifolioHeader({ className, ...props }: PortifolioHeaderProps)
         <header {...props} className={`p-5 md:p-10 flex flex-col md:flex-row justify-between ${className}`}>
             <div className="grow">
                 <h4 className="text-lg japanese-text">
-                    {personal?.name?.japanese}
+                    {personal.presentation.japaneseName}
                 </h4>
 
                 <h2 className="text-4xl">
-                    {personal?.name?.original}
+                    {personal.presentation.fullname}
                 </h2>
 
                 <h2 className="text-lg">
-                    {personal?.title}
+                    {personal.presentation.title}
                 </h2>
             </div>
         </header>
