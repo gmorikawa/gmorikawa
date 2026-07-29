@@ -1,21 +1,26 @@
-import personal from "@portfolio/data/personal-information.json";
+export interface HeaderProps extends React.ComponentProps<"header"> {
+    japaneseName: string;
+    fullname: string;
+    title: string;
+}
 
-export type PortifolioHeaderProps = React.ComponentProps<"header">;
-
-export function PortifolioHeader({ className, ...props }: PortifolioHeaderProps) {
+export function Header({ className, japaneseName, fullname, title, ...props }: HeaderProps) {
     return (
-        <header {...props} className={`p-5 md:p-10 flex flex-col md:flex-row justify-between ${className}`}>
+        <header
+            {...props}
+            className={["p-5 md:p-10 flex flex-col md:flex-row justify-between", className].join(" ")}
+        >
             <div className="grow">
                 <h4 className="text-lg japanese-text">
-                    {personal?.name?.japanese}
+                    {japaneseName}
                 </h4>
 
                 <h2 className="text-4xl">
-                    {personal?.name?.original}
+                    {fullname}
                 </h2>
 
                 <h2 className="text-lg">
-                    {personal?.title}
+                    {title}
                 </h2>
             </div>
         </header>
