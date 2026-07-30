@@ -1,5 +1,9 @@
+import { MainContainer } from "@portfolio/components/main-container";
+
 export function Projects() {
     return (
-        <div>Projects</div>
+        <MainContainer>
+            <div>Projects</div>
+        </MainContainer>
     );
 }

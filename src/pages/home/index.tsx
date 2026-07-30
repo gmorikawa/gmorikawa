@@ -1,3 +1,5 @@
+import { MainContainer } from "@portfolio/components/main-container";
+
 export function Home() {
     const paragraphs = [
         "Hello, my name is Gabriel Morikawa!",
@@ -7,12 +9,12 @@ export function Home() {
     ];
 
     return (
-        <div className="p-5 md:p-10">
+        <MainContainer>
             {paragraphs.map((paragraph, index) => (
                 <p key={index} className="mb-2">
                     {paragraph}
                 </p>
             ))}
-        </div>
+        </MainContainer>
     );
 }

@@ -1,5 +1,9 @@
+import { MainContainer } from "@portfolio/components/main-container";
+
 export function Skills() {
     return (
-        <div>Skills</div>
+        <MainContainer>
+            <div>Skills</div>
+        </MainContainer>
     );
 }
