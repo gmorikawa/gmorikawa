@@ -1,3 +1,5 @@
+import { Link } from "@portfolio/components/router";
+
 export interface ActionMenuItemProps extends React.ComponentProps<"li"> {
     icon?: React.ReactNode;
     link: string;
@@ -7,9 +9,9 @@ export interface ActionMenuItemProps extends React.ComponentProps<"li"> {
 export function ActionMenuItem({ icon, link, label, className, ...props }: ActionMenuItemProps) {
     return (
         <li {...props} className={["text-nowrap", className].filter(Boolean).join(" ")} >
-            <a href={link} className="flex items-center gap-2">
+            <Link to={link} className="flex items-center gap-2">
                 {icon} {label}
-            </a>
+            </Link>
         </li>
     );
 }

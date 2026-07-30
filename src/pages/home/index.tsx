@@ -1,10 +1,3 @@
-import personal from "@portfolio/data/base.json";
-
-import { Header } from "@portfolio/components/header";
-import { MainLayout } from "@portfolio/components/main-layout";
-import { Footer } from "@portfolio/components/footer";
-import { ApplicationMenu } from "../menu";
-
 export function Home() {
     const paragraphs = [
         "Hello, my name is Gabriel Morikawa!",
@@ -14,29 +7,12 @@ export function Home() {
     ];
 
     return (
-        <MainLayout
-            header={
-                <Header
-                    japaneseName={personal.presentation.japaneseName}
-                    fullname={personal.presentation.fullname}
-                    title={personal.presentation.title}
-                />
-            }
-            footer={
-                <Footer quote={personal.presentation.quote} />
-            }
-            side={
-                <ApplicationMenu />
-            }
-            main={
-                <div className="p-5 md:p-10">
-                {paragraphs.map((paragraph, index) => (
-                    <p key={index} className="mb-2">
-                        {paragraph}
-                    </p>
-                ))}
-                </div>
-            }
-        />
+        <div className="p-5 md:p-10">
+            {paragraphs.map((paragraph, index) => (
+                <p key={index} className="mb-2">
+                    {paragraph}
+                </p>
+            ))}
+        </div>
     );
 }
