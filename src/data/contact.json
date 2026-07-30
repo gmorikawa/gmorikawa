@@ -1,0 +1,35 @@
+[
+    {
+        "type": "email",
+        "label": {
+            "en-US": "E-mail",
+            "pt-BR": "E-mail",
+            "ja-JP": "メールアドレス"
+        },
+        "value": "gabriel.morikawa@live.com",
+        "link": "mailto:gabriel.morikawa@live.com",
+        "icon": "https://s.magecdn.com/social/mb-mail.svg"
+    },
+    {
+        "type": "social",
+        "label": {
+            "en-US": "LinkedIn",
+            "pt-BR": "LinkedIn",
+            "ja-JP": "リンクトイン"
+        },
+        "value": "linkedin.com/in/gmorikawa",
+        "link": "https://linkedin.com/in/gmorikawa",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+    },
+    {
+        "type": "social",
+        "label": {
+            "en-US": "Github",
+            "pt-BR": "Github",
+            "ja-JP": "ギットハブ"
+        },
+        "value": "github.com/gmorikawa",
+        "link": "https://github.com/gmorikawa",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+    }
+]
