@@ -8,7 +8,6 @@ import { Footer } from "@portfolio/components/footer";
 import { ApplicationMenu } from "./menu";
 import { Skills } from "./skills";
 import { Projects } from "./projects";
-import { Contact } from "./contact";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -43,10 +42,6 @@ export const routes: RouterRoute[] = [
     {
         path: "/projects",
         element: <Layout><Projects /></Layout>,
-    },
-    {
-        path: "/contact",
-        element: <Layout><Contact /></Layout>,
     },
 ];
 
